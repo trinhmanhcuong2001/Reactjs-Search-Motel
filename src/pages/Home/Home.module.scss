@@ -2,11 +2,11 @@
 }
 
 .search {
-    background-image: url("../../assets/images/hero_bg_1.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     height: 100vh;
+    min-height: 600px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -14,4 +14,49 @@
 }
 
 .search-content {
+    width: 70%;
+    padding: 0 12px;
+    text-align: center;
+}
+
+.search-heading {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.form-input {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+}
+
+.search-input {
+    height: 52px;
+    padding: 18px 24px;
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    outline: none;
+}
+
+.search-btn {
+    background-color: var(--primary);
+    padding: 15px 30px;
+    border-radius: 30px;
+    color: #fff;
+    border: none;
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.search-input::placeholder {
+    font-size: 16px;
+    opacity: 0.7;
 }
