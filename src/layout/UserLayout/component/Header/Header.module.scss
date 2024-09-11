@@ -1,0 +1,35 @@
+.wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 9;
+    width: 100%;
+    position: absolute;
+}
+
+.container {
+    background-color: var(--primary);
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 7px;
+    padding: 20px 30px;
+    height: 81px;
+}
+
+.logo {
+    float: left;
+    font-size: 24px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.list-menu {
+    float: right;
+}
+
+.list-item {
+    padding: 10px 15px;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
