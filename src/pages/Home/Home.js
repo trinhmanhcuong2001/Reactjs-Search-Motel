@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Home.module.scss";
 import { backgroundSearchImages } from "../../assets/images";
+import OutstandingMotel from "../../component/OutstandingMotel";
 
 const cx = classNames.bind(styles);
 
@@ -13,8 +14,29 @@ const images = [
 
 function Home() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [loadedImages, setLoadedImages] = useState([]);
 
     useEffect(() => {
+        const loadImages = images.map((src) => {
+            const img = new Image();
+            img.src = src;
+            return img;
+        });
+
+        Promise.all(
+            loadImages.map(
+                (img) =>
+                    new Promise((resolve) => {
+                        img.onload = resolve;
+                    })
+            )
+        ).then(() => {
+            setLoadedImages(images);
+        });
+    }, []);
+
+    useEffect(() => {
+        if (loadedImages.length === 0) return;
         const interval = setInterval(() => {
             setCurrentImageIndex((prevIndex) =>
                 prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -22,14 +44,14 @@ function Home() {
         }, 3000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [loadedImages]);
 
     return (
         <div className={cx("container")}>
             <section
                 className={cx("search")}
                 style={{
-                    backgroundImage: `url(${images[currentImageIndex]})`,
+                    backgroundImage: `url(${loadedImages[currentImageIndex]})`,
                 }}
             >
                 <div className={cx("search-content")}>
@@ -47,7 +69,7 @@ function Home() {
                 </div>
             </section>
             <section className={cx("outstanding-motel")}>
-                <h1>Alo Alo</h1>
+                <OutstandingMotel />
             </section>
         </div>
     );
