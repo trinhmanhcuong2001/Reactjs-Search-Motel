@@ -3,12 +3,17 @@
     margin: 0 auto;
     overflow: hidden;
     padding: 0 12px;
+    position: relative;
 }
 
 .heading {
     display: flex;
     justify-content: space-between;
     margin-bottom: 48px;
+}
+
+.heading:has(.center.title) {
+    justify-content: center;
 }
 
 .title {
@@ -37,13 +42,14 @@
 .content {
     display: flex;
     width: max-content;
+    transition: all 0.5s ease-in-out;
 }
 
 .action-btn {
     display: flex;
     justify-content: space-between;
     position: relative;
-    top: -50px;
+    // top: -50px;
 
     button {
         padding: 7px 20px;

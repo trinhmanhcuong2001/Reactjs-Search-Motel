@@ -11,3 +11,12 @@ export const propertyImage = {
     img_4: require("./properties/img_4.jpg"),
     img_5: require("./properties/img_5.jpg"),
 };
+
+export const newCommentImage = {
+    person_1: require("./newComment/person_1-min.jpg"),
+    person_2: require("./newComment/person_2-min.jpg"),
+    person_3: require("./newComment/person_3-min.jpg"),
+    person_4: require("./newComment/person_4-min.jpg"),
+    person_5: require("./newComment/person_5-min.jpg"),
+    person_6: require("./newComment/person_6-min.jpg"),
+};

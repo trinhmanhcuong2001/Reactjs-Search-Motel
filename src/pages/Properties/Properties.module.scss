@@ -1,0 +1,78 @@
+.wrapper {
+}
+
+.background-heading {
+    background-image: url("../../assets/images/backgroundSearch/hero_bg_1.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-title {
+    color: #fff;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.outstanding-motel {
+    padding: 64px 0;
+}
+
+.list-motel {
+    padding: 64px 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+
+    .motel-item {
+        flex-basis: calc((100% / 3));
+        padding: 0 12px;
+    }
+}
+
+.paginate {
+    padding: 48px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.paginate-text {
+    width: 25%;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-paginate {
+    display: flex;
+    column-gap: 4px;
+    justify-content: center;
+    width: 50%;
+
+    li {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 700;
+        border-radius: 50%;
+        background: rgba(0, 32, 74, 0.1);
+        color: #00204a;
+        text-align: center;
+
+        &.active {
+            background-color: #00204a;
+            color: #fff;
+        }
+    }
+}

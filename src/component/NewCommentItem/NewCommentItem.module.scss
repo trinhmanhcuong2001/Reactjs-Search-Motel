@@ -1,0 +1,41 @@
+.wrapper {
+    width: calc((85vw / 3) - 30px);
+}
+
+.wrapper + .wrapper {
+    margin-left: 30px;
+}
+
+.avatar {
+    width: 25%;
+    border-radius: 50%;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.rate {
+    color: rgb(255, 193, 7);
+    font-size: 14px;
+}
+
+.name {
+    margin-bottom: 24px;
+    color: rgb(0, 32, 74);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content {
+    margin-bottom: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.time {
+    margin-bottom: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}

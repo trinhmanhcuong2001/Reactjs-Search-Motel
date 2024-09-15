@@ -5,6 +5,33 @@ import config from "../../../../config";
 
 const cx = classNames.bind(styles);
 
+const listRoute = [
+    {
+        path: config.routes.home,
+        title: "Trang chủ",
+    },
+    {
+        path: config.routes.properties,
+        title: "Thuê Phòng Trọ",
+    },
+    {
+        path: "/not-route",
+        title: "Thuê Căn Hộ",
+    },
+    {
+        path: "/not-route",
+        title: "Giới thiệu",
+    },
+    {
+        path: "/not-route",
+        title: "Liên hệ",
+    },
+    {
+        path: "/not-route",
+        title: "Đăng nhập",
+    },
+];
+
 function Header() {
     return (
         <nav className={cx("wrapper")}>
@@ -13,27 +40,19 @@ function Header() {
                     DDC
                 </Link>
                 <div className={cx("list-menu")}>
-                    <NavLink
-                        className={cx("list-item")}
-                        to={config.routes.home}
-                    >
-                        Trang chủ
-                    </NavLink>
-                    <NavLink className={cx("list-item")} to="/not-route">
-                        Thuê Phòng Trọ
-                    </NavLink>
-                    <NavLink className={cx("list-item")} to="/not-route">
-                        Thuê Căn Hộ
-                    </NavLink>
-                    <NavLink className={cx("list-item")} to="/not-route">
-                        Giới thiệu
-                    </NavLink>
-                    <NavLink className={cx("list-item")} to="/not-route">
-                        Liên hệ
-                    </NavLink>
-                    <NavLink className={cx("list-item")} to="/not-route">
-                        Đăng nhập
-                    </NavLink>
+                    {listRoute.map((route, index) => (
+                        <NavLink
+                            key={index}
+                            className={({ isActive }) =>
+                                cx("list-item", {
+                                    active: isActive,
+                                })
+                            }
+                            to={route.path}
+                        >
+                            {route.title}
+                        </NavLink>
+                    ))}
                 </div>
             </div>
         </nav>
