@@ -27,7 +27,7 @@ const listRoute = [
         title: "Liên hệ",
     },
     {
-        path: "/not-route",
+        path: config.routes.loginRegister,
         title: "Đăng nhập",
     },
 ];
