@@ -56,3 +56,35 @@
         border: 1px solid #888888;
     }
 }
+
+.master-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+    border: 2px solid #efefef;
+    margin-bottom: 50px;
+}
+
+.image-master {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.master-name {
+    color: rgb(0, 32, 74);
+    font-size: 16px;
+}
+
+.text-info {
+    p {
+        margin: 16px 0;
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.comment {
+    padding: 64px 0;
+}

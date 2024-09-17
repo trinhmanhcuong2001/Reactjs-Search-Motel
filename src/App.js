@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { publicRoutes } from "./routes";
 import { Fragment } from "react";
+import ScrollToTop from "./component/ScrollToTop";
 
 function App() {
     return (
         <Router>
             <div className="App">
+                <ScrollToTop />
                 <Routes>
                     {publicRoutes.map((route, index) => {
                         const Layout = route.layout ? route.layout : Fragment;

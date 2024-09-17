@@ -1,7 +1,8 @@
 import classNames from "classnames/bind";
 import styles from "./PropertyDetail.module.scss";
-import { backgroundSearchImages } from "../../assets/images";
+import { backgroundSearchImages, newCommentImage } from "../../assets/images";
 import { useEffect, useRef } from "react";
+import Comment from "../../component/Comment/Comment";
 
 const cx = classNames.bind(styles);
 
@@ -28,6 +29,11 @@ const data = {
     <p>&nbsp;-Bán nhà Nguyễn Văn Lộc 38m2, 5 tầng, Giá chào 5,95 tỷ có thương lượng - Vị trí trung tâm Hà Đông xung quanh là các Khu đô thị Mỗ Lao, Làng Việt Kiều châu Âu, Khu đô thị Văn Quán, hưởng trọn tiện ích..&nbsp;</p>
     <p>- Ngõ Nguyễn Văn Lộc Ô tô tránh thông sang Phố Ao Sen sầm uất, kinh doanh tập nập, nhà cách oto dừng đỗ 15m. Giao thông thuận tiện kết nối các khu vực.&nbsp;</p><p>Thiết kế: 5 tầng, 3 ngủ(có thể thêm thành 4 ngủ), 5 vệ sinh&nbsp;</p><p>+ Tầng 1: Phòng khách , bếp, sân để xe, vệ sinh.&nbsp;</p>
     <p>+ Tầng 2-3-4 : mỗi tầng 1 PN + vệ sinh khép kín, thoáng, ban công&nbsp;</p><p>+ Tầng 5: phòng thờ, tum, sân phơi - Sổ đỏ chính chủ chờ giao dịch. Liên hệ em để xem nhà trực tiếp ***</p>`,
+    user: {
+        name: "Chủ nhà A",
+        phone: "0975746351",
+        image: newCommentImage.person_1,
+    },
 };
 
 function PropertyDetail() {
@@ -62,6 +68,21 @@ function PropertyDetail() {
                         className={cx("property-description")}
                         dangerouslySetInnerHTML={{ __html: data.description }}
                     ></div>
+                </div>
+                <div className={cx("master-info")}>
+                    <img
+                        className={cx("image-master")}
+                        src={data.user.image}
+                        alt={data.user.name}
+                    />
+                    <div className={cx("text-info")}>
+                        <h4 className={cx("master-name")}>{data.user.name}</h4>
+                        <p>Chủ Phòng</p>
+                        <p className={cx("master-phone")}>{data.user.phone}</p>
+                    </div>
+                </div>
+                <div className={cx("comment")}>
+                    <Comment />
                 </div>
             </section>
         </div>

@@ -15,7 +15,9 @@ function MotelItem({ data, className }) {
                 [className]: className,
             })}
         >
-            <Link to={config.routes.home}>
+            <Link
+                to={`${config.routes.propertyDetail.replace(":id", data.id)}`}
+            >
                 <img className={cx("img")} src={data.image} alt="test" />
             </Link>
             <div className={cx("content")}>

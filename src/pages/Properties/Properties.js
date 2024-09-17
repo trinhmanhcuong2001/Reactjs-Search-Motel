@@ -8,30 +8,35 @@ const cx = classNames.bind(styles);
 
 const dataMotelItem = [
     {
+        id: 1,
         image: propertyImage.img_1,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 2,
         image: propertyImage.img_2,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 3,
         image: propertyImage.img_3,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 4,
         image: propertyImage.img_4,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 5,
         image: propertyImage.img_5,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
@@ -41,54 +46,63 @@ const dataMotelItem = [
 
 const listMotel = [
     {
+        id: 1,
         image: propertyImage.img_1,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 2,
         image: propertyImage.img_2,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 3,
         image: propertyImage.img_3,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 4,
         image: propertyImage.img_4,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 5,
         image: propertyImage.img_5,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 6,
         image: propertyImage.img_5,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 7,
         image: propertyImage.img_5,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 8,
         image: propertyImage.img_5,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
         name: "California, USA",
     },
     {
+        id: 9,
         image: propertyImage.img_5,
         price: "$1,121,000",
         address: "5232 California Fake, Ave. 21BC",
